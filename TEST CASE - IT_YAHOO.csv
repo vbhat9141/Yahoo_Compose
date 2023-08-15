@@ -1,0 +1,76 @@
+﻿,TEST SCENARIOS,,,,,,,
+,"1. Login as user A, click on compose button, fill all data containing user B email id, subject and body, click on send button and check whether mail is sended.
+2. Login as user A, send mail to user B, click on sent button and check whether mail is displayed.
+3. Login as user A, click on sent button, select one mail, delete the mail and check whether mail is deleted.
+4. Login as user A, Click on compose button, fill all data except 'To' filed, click on send button and check whether mail is sended, logout as user A, Login as user     B, click on inbox and check whether mail is displyed.
+5.Login as user B, enter invalid email id in 'To' filed and click on send button and check whether mail is sended.",,,,,,,
+,,,,,,,,
+,TEST CASE TEMPLATE,,,,,,,
+,,,,,,,,
+,HEADER,,,,,,,
+,,,,,,,,
+,TEST CASE NAME/ID,YAHOO-COMP-01,,,,,,
+,,,,,,,,
+,PROJECT NAME ,Compose Mail,,,,,,
+,,,,,,,,
+,RELEASE NAME,yahoo_2,,,,,,
+,,,,,,,,
+,REQUIREMENT NO.,5.8.5,,,,,,
+,,,,,,,,
+,MODULE NAME,Compose,,,,,,
+,,,,,,,,
+,PRE CONDITION,"1.Check for internet connection
+2.  user A login details should be displayed
+3. user B login details should be displayed
+",,,,,,
+,,,,,,,,
+,TEST DATA,NA,,,,,,
+,,,,,,,,
+,POST CONDITION,NA,,,,,,
+,,,,,,,,
+,SEVERITY,critical,,,,,,
+,,,,,,,,
+,TEST CASE TYPE,Integration Testing,,,,,,
+,,,,,,,,
+,BRIEF DESCRIPTION,Mail should be sended,,,,,,
+,,,,,,,,
+,TEST CASE EXECUTION HOURS,,,,,,,
+,,,,,,,,
+,BODY,,,,,,,
+,,,,,,,,
+,STEP Number,   ACTION/DESCRIPTION,,INPUT,EXPECTED RESULT,ACTUAL RESULT,STATUS,COMMENTS
+,1,open the browser and enter the test URL,,https://login.yahoo.com,"login/welcome page should be displayed with'Email' textfiled, 'Next' button, 'Forgotten username' link, 'Stayed signed in' checkbox and 'Create account' button",,,
+,2,Enter valid UN  click on Next button,,"UN: vbhat9141@yahoo.com
+",Password page should be displayed,,,
+,3,Enter valid PWD  click on Next button,,PWD: Vishal9141,Home page should be displayed,,,
+,4,Click on compose button,,NA,Compose mail page should be displyed,,,
+,5,Enter all fields from compose mail page,,"To: bhatvishal30609@gmail.com
+Subject: Job application for job
+Body: PFA",All data should be displayed,,,
+,6,Click on Send button,,NA,Mail should be sended,,,
+,7,Click on Sent button,,NA,Sent mail page should be displyed,,,
+,8,Select one mail from sent page,,NA,Mail should be selected,,,
+,9,Click on delete button,,NA,Mail should be deleted,,,
+,10,Enter all fields from compose mail page except 'To' text field,,"To:
+Subject: Job application for job
+Body: PFA",Data should be displayed,,,
+,11,Click on Send button,,NA,Proper error message shoud be displayed,,,
+,12,Click on 'Logout' button,,NA,user A should be successfully logged out,,,
+,13,Login as user B using valid UN and PWD,,"UN: bhatvishal30609@yahoo.com
+PWD: Bhatvishal30609
+",Home page should be displayed,,,
+,14,Click on Inbox button,,NA,Inbox page should be diplayed,,,
+,15,Click on compose button,,NA,Compose mail page should be displyed,,,
+,16,Enter invalid emil id in 'To text field,,To: vsb123#gmail.com,Proper error message shoud be displayed,,,
+,17,Click on 'Logout' button,,NA,user B should be successfully logged out,,,
+,,,,,,,,
+,FOOTER,,,,,,,
+,,,,,,,,
+,AUTHOR NAME,Vishal Bhat,,,,,,
+,,,,,,,,
+,REVIEWED BY,XYZ,,,,,,
+,,,,,,,,
+,APPROVED BY,ABC,,,,,,
+,,,,,,,,
+,APPROVAL DATE,,,,,,,
+ ,,,,,,,,

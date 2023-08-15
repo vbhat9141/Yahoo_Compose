@@ -1,0 +1,81 @@
+﻿,TEST SCENARIOS,,,,,,,
+,Login as user A click on Compose button enter valid data in all fields click on send button click on sent button check for mail select the mail forward to user C logout as user A login as user B check inbox select the mail delete the mail logout as user B login as user C check inbox delete the mail go to trash check the mail  logout as user C after 7 days login as user C go to trash and check that mail is vanished.,,,,,,,
+,,,,,,,,
+,TEST CASE TEMPLATE,,,,,,,
+,,,,,,,,
+,HEADER,,,,,,,
+,,,,,,,,
+,TEST CASE NAME/ID,YAHOO-COMP-3,,,,,,
+,,,,,,,,
+,PROJECT NAME ,Compose Mail,,,,,,
+,,,,,,,,
+,RELEASE NAME,yahoo_2,,,,,,
+,,,,,,,,
+,REQUIREMENT NO.,17.9.13,,,,,,
+,,,,,,,,
+,MODULE NAME,Compose,,,,,,
+,,,,,,,,
+,PRE CONDITION,"1.Check for internet connection
+2.  user A login details should be displayed
+3. user B login details should be displayed
+",,,,,,
+,,,,,,,,
+,TEST DATA,NA,,,,,,
+,,,,,,,,
+,POST CONDITION,NA,,,,,,
+,,,,,,,,
+,SEVERITY,critical,,,,,,
+,,,,,,,,
+,TEST CASE TYPE,System Testing,,,,,,
+,,,,,,,,
+,BRIEF DESCRIPTION,Mails should be deleted automatically from trash after 7 days.,,,,,,
+,,,,,,,,
+,TEST CASE EXECUTION HOURS,,,,,,,
+,,,,,,,,
+,BODY,,,,,,,
+,,,,,,,,
+,STEP Number,   ACTION/DESCRIPTION,,INPUT,EXPECTED RESULT,ACTUAL RESULT,STATUS,COMMENTS
+,1,open the browser and enter the test URL,,https://login.yahoo.com,"login/welcome page should be displayed with'Email' textfiled, 'Next' button, 'Forgotten username' link, 'Stayed signed in' checkbox and 'Create account' button",,,
+,2,Enter valid UN  click on Next button,,"UN: vbhat9141@yahoo.com
+",Password page should be displayed,,,
+,3,Enter valid PWD  click on Next button,,PWD: Vishal9141,Home page should be displayed,,,
+,4,Click on compose button,,NA,Compose mail page should be displyed,,,
+,5,Enter all fields from compose mail page,,"To: bhatvishal30609@gmail.com
+Subject: Job application for job
+Body: PFA",All data should be displayed,,,
+,6,Click on Send button,,NA,Mail should be sended,,,
+,7,Click on Sent button,,NA,Sent mail page should be displyed,,,
+,8,Select one mail from sent page and forward to user C,,"To: shekhar123@gmail.com
+Subject: Job application for job
+Body: PFA",Mail should be forwarded,,,
+,9,Click on 'Logout' button,,NA,user A should be successfully logged out,,,
+,10,Login as user B using valid UN and PWD,,"UN: bhatvishal30609@yahoo.com
+PWD: Bhatvishal30609
+",Home page should be displayed,,,
+,11,Click on Inbox button,,NA,Inbox page should be diplayed,,,
+,12,Select the mail and delete it,,NA,Mail should be successfully deleted,,,
+,13,Click on 'Logout' button,,NA,user B should be successfully logged out,,,
+,14,Login as user C using valid UN and PWD,,"UN: shekhar123@yahoo.com
+PWD: Shekhar123
+",Home page should be displayed,,,
+,15,Click on Inbox button,,NA,Inbox page should be diplayed,,,
+,16,Select the mail and delete it,,NA,Mail should be successfully deleted,,,
+,17,Click on Trash button,,NA,Mail should be diplayed,,,
+,18,Click on 'Logout' button,,NA,user B should be successfully logged out,,,
+,19,Change the system date and time/ Server date and time for 7 days,,NA,,,,
+,20,Login as user C using valid UN and PWD,,"UN: shekhar123@yahoo.com
+PWD: Shekhar123
+",Home page should be displayed,,,
+,21,Click on Trash button,,NA,Mail should be successfully vanished,,,
+,22,Click on 'Logout' button,,NA,user B should be successfully logged out,,,
+,,,,,,,,
+,FOOTER,,,,,,,
+,,,,,,,,
+,AUTHOR NAME,Vishal Bhat,,,,,,
+,,,,,,,,
+,REVIEWED BY,XYZ,,,,,,
+,,,,,,,,
+,APPROVED BY,ABC,,,,,,
+,,,,,,,,
+,APPROVAL DATE,,,,,,,
+ ,,,,,,,,
